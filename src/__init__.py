@@ -1,2 +1,1 @@
-from .main import *
-from .logging import *
+from .main import OSC

@@ -3,6 +3,15 @@ import sys
 
 import requests
 
+stream_handler = logging.StreamHandler(sys.stdout)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="[{%(filename)s:%(lineno)d} %(levelname)s - %(message)s",
+    handlers=[stream_handler],
+)
+
+
 class OSC:
     def __init__(
         self,
@@ -17,7 +26,9 @@ class OSC:
             protocol=self.protocol, baseurl=self.baseurl, version=self.version
         )
 
-    def get_photos_from_point(self, lat: float, lng: float, zoomLevel: int = 12) -> dict:
+    def get_photos_from_point(
+        self, lat: float, lng: float, zoomLevel: int = 12
+    ) -> dict:
         """
         Gather filtered dictionary list from OSC photos request
         """
