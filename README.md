@@ -2,6 +2,8 @@
 
 An OpenStreetCam.org client in Python for ease in requesting publicly available resources from the platform.
 
+Originally created as part of the following volunteer AI challenge: _Omdena + iRAP: Preventing Road Crashes and Saving Lives_ (https://omdena.com/projects/ai-road-safety/).
+
 ## Installation
 
 ```shell
