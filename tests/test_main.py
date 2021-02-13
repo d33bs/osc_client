@@ -1,9 +1,12 @@
 import os
 import sys
+sys.path.append(os.getcwd())
 
 import pytest
 
-from osc_client import OSC
+from osc_client.main import OSC
+
+
 
 osc = OSC()
 sample_point = {"lat": 34.94083565649461, "lng": -82.8662492514243}
