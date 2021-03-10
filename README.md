@@ -10,6 +10,12 @@ Originally created as part of the following volunteer AI challenge: _Omdena + iR
 pip install git+https://github.com/d33bs/osc_client@main#egg=osc_client
 ```
 
+## Distribution Packaging
+
+```shell
+python setup.py sdist bdist_wheel
+```
+
 ## Usage
 
 ### Simple Request Example
