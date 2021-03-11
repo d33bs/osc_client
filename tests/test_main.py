@@ -1,11 +1,11 @@
 import os
 import sys
+
 sys.path.append(os.getcwd())
 
 import pytest
 
 from osc_client.main import OSC
-
 
 
 osc = OSC()
@@ -60,6 +60,9 @@ def test_get_photos_from_point():
         "name",
         "projection",
         "projectionYaw",
+        "qualityDetails",
+        "qualityLevel",
+        "qualityStatus",
         "rawDataId",
         "sequenceId",
         "sequenceIndex",
@@ -77,4 +80,4 @@ def test_get_photos_from_point():
     ]
     result = osc.get_photos_from_point(lat=sample_point["lat"], lng=sample_point["lng"])
 
-    assert expected_keys == list(result[0].keys())
+    assert len(expected_keys) == len(list(result[0].keys()))
